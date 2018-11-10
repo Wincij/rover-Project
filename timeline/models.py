@@ -5,3 +5,7 @@ class Entry(models.Model):
     pub_date = models.DateTimeField(null=False)
     body = models.TextField()
     image = models.ImageField(upload_to='images/', max_length = 100)
+
+# For readable admin panel and managing 
+    def __str__(self):
+        return self.title
