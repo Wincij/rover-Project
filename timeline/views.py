@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Entry
 
-# Create your views here.
+def timeline(request):
+    entries = Entry.objects
+    return render(request, 'timeline/timeline.html', {'entry':entries})

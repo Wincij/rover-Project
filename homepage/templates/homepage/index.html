@@ -1,5 +1,6 @@
 
 <!doctype html>
+{% load staticfiles %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,221 +13,99 @@
 
     <!-- Bootstrap core CSS -->
 
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.css" rel="stylesheet" /> 
-
-
-    <!-- Custom styles for this template -->
-    <!-- <link href="album.css" rel="stylesheet"> -->
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'home/css/my.css' %}" rel="stylesheet" />
+    <link href="{% static 'home/css/fly-in-text.css' %}" rel="stylesheet" />
   </head>
 
-  <body>
+  <body style="background-color: #BBBBBB;">
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader" >
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
+    <header class="page-scroll">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark page fixed-top">
+        <b><a class="mylink" href="{% url 'home' %}"><font color="#f1b10e">UoW ROVER TEAM</font></a></b>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="mylink_active" href="{% url 'home' %}">About <span class="sr-only">(current)</span></a>
+            <a class="mylink" href="{% url 'timeline' %}">Timeline</a>
+            <a class="mylink" href="#">Join us</a>
+            <a class="mylink" href="#">Partners</a>
           </div>
-        </div> -->
-      </div>
-      <div class="navbar navbar-dark " style="background-color:#ff8c1a;">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Album</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main role="main">
 
       <section class="jumbotron text-center img-fluid img-max-width" style="background-image: url(http://rover.fuw.edu.pl/img/header-bg.jpg);    background-repeat: no-repeat;    background-attachment: scroll;    background-position: center center;    -webkit-background-size: cover;    -moz-background-size: cover; background-size: cover;    -o-background-size: cover;    text-align: center;    color: white;">
         <div class="container" >
-          <h1 class="jumbotron-heading display-3"><span style="background-color:rgba(241, 177, 14, 0.42); color:#111111; font-weight:bold;">UNIVERSITY OF WARSAW ROVER TEAM</span></h1>
-          <p class="lead text"><h2>Marsyatic Start-Up project</h2></p>
-          <p>
-            <h4>University of Warsaw Rover Team is a student team devoted to the construction of mars rover analogues for international robotics competitions. Currently we count about fifteen students from five different faculties of the University of Warsaw.
+          <br /><br /><br /><br />
+          <h1 class="jumbotron-heading display-3">
+              <ul class="fly-in-text hidden">
+                <li><span style="background-color:rgba(241, 177, 14, 0.42); color:#333333; font-weight:bold; padding: 3px 10px 3px 10px; ">UNIVERSITY OF WARSAW ROVER TEAM</span></li>
+              <!-- {% for i in "UNIVERSITY OF WARSAW" %}
+                <li>{{ i }}</li>
+              {% endfor %}
+              {% for i in " ROVER TEAM" %}
+                <li>{{ i }}</li>
+              {% endfor %} -->
+            </ul>
 
-            We take part in a variety of competitions but all of them place similar demands: to construct a remotely controlled robot (Mars Rover analogue) capable of accomplishing a set of tasks, which are meant to simulate what real rovers may face during future manned missions to Mars. This includes exploration of rough terrain, picking up and delivering objects, manipulating equipment and performing scientific surveys of the area. In addition some of the tasks need to be performed autonomously, without any operator’s input.</h4>
-          </p>
+          </h1>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <p class="lead text"><h2>Marsyatic Start-Up project</h2></p>
+          <br />
+
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
+      <div class="album py-5 bg-gray fluid">
         <div class="container">
+          <p class ="par0"><img src="{% static 'home/img/about.png' %}" float="right" width="100px" alt="Timeline">ABOUT US:</p>
+          <p align="justify" class="par1">
+            University of Warsaw Rover Team is a student team devoted to the construction of mars rover analogues for international robotics competitions. Currently we count about fifteen students from five different faculties of the University of Warsaw.
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            We take part in a variety of competitions but all of them place similar demands: to construct a remotely controlled robot (Mars Rover analogue) capable of accomplishing a set of tasks, which are meant to simulate what real rovers may face during future manned missions to Mars. This includes exploration of rough terrain, picking up and delivering objects, manipulating equipment and performing scientific surveys of the area. In addition some of the tasks need to be performed autonomously, without any operator’s input.
+          </p>
+          <p align=center><iframe src="https://tvpw.pl/embd/misja-mars" width="100%" height="450" frameborder="0" allowfullscreen></iframe></p>
         </div>
+
       </div>
 
     </main>
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
+    <footer class="text-muted bg-dark page" style="padding-bottom:1px; padding-top:10px;">
+          <p align="center" style="padding-left:50px;">
+            Copyright © University of Warsaw Rover Team 2017.
+            <a href="#" class="btn btn-lg btn-secondary" style="background-color:rgba(241, 177, 14, 0.95) ; ">Back to top</a>
+          </p>
     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
-    <script src="../js/bootstrap.min.js"></script>
 
+    accepted
+    You need to include Popper as per the Getting Started Docs.
+
+    Use these for your scripts instead.
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+
+            setTimeout(function() {
+                $('.fly-in-text').removeClass('hidden');
+            }, 500);
+
+        })();
+
+    </script>
   </body>
 </html>

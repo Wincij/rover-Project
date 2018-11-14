@@ -1,0 +1,125 @@
+
+
+.logo {
+  color: rgba(241, 177, 14, 0.8);
+  display: block;
+  font: Tahoma;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: rgba(241, 177, 14, 0.8);
+  display: block;
+  font: Tahoma;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo:active {
+  color: rgba(241, 177, 14, 0.8);
+  display: block;
+  font: Tahoma;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.par0 {
+  font-size:4rem;
+  padding: 20px 40px 20px 40px ;
+  font-weight: 900;
+  font-style: bold;
+  letter-spacing: 5px;
+
+}
+
+.par1 {
+  font-size:1.1rem;
+  padding: 20px 40px 20px 40px ;
+  background-color: #888888;
+  border-radius:10px;
+
+}
+
+.par2 {
+  font-size:2rem;
+  padding: 20px 40px 20px 40px ;
+  background-color: #888888;
+  border-radius:10px;
+}
+
+.par777 {
+  font-size:1.1rem;
+
+
+}
+
+.mylink {
+  color: rgba(241, 177, 14, 0.8);
+  display: block;
+  font: Tahoma;
+  padding: 0.5rem 1rem;
+}
+.mylink:visited {
+  color: rgba(241, 177, 14, 0.8);
+  display: block;
+  font: Tahoma;
+  padding: 0.5rem 1rem;
+}
+
+.mylink_active, .mylink_active:hover {
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  font: Tahoma;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mylink:hover {
+  color: rgba(241, 177, 14, 0.99);
+  display: block;
+  font: Tahoma;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-shadow: 1px 1px rgba(241, 177, 14, 0.5);
+}
+
+.timelinestamp {
+  clear: both;
+  padding: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #888888;
+  margin-bottom:10px;
+  width:100%;
+  display:inline-block;
+  border-style: groove;
+  border:50px;
+  border-color: #999999;
+  border-radius: 25px;
+}
+
+li {
+    display: inline-block;
+}
+
+
+.title {
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  font-weight: 1000;
+  color: rgba(241, 177, 14, 1);
+  margin-left: 220px;
+}
+
+
+.date {
+  font-size: 1.3rem;
+  letter-spacing: 0.5rem;
+  font-weight: 1000;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1px;
+}
