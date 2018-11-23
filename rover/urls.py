@@ -22,7 +22,7 @@ import homepage.views, timeline.views, joinus.views, supporters.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', homepage.views.main_page, name="home"),
-    url('', homepage.views.main_page, name="home"),
+    # url('', homepage.views.main_page, name="home"),
     url(r'^timeline/', timeline.views.timeline, name ="timeline"),
     url(r'^join/', joinus.views.joinus, name ="joinus"),
     url(r'^supporters/', supporters.views.supporters, name ="supporters"),
