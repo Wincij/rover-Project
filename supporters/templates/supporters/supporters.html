@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="album py-5 bg-gray fluid">
+  <div class="container">
+
+    <p class ="par0"><img src="{% static 'supporters/supporters.png' %}" float="right" height="100px" alt="Timeline">SUPPORTERS:</p>
+    <div class="row">
+      {% for supporter in supporters.all %}
+      <a style="text-decoration:none;" href="{{ supporter.website }}" target="_blank" >
+        <div class="supporter">
+          <img src="{{ supporter.image.url }}" style="  justify-content: center; width:200px;  overflow: hidden;align-items: center;">
+          <br />
+          {{ supporter.name }}
+        </div></a>
+      {% endfor %}
+
+    </div>
+</div>
+
+</main>
+
+{% endblock %}

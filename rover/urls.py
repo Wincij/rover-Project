@@ -18,9 +18,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-import homepage.views, timeline.views
+import homepage.views, timeline.views, joinus.views, supporters.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home', homepage.views.main_page, name="home"),
+    url(r'^home/', homepage.views.main_page, name="home"),
+    url('', homepage.views.main_page, name="home"),
     url(r'^timeline/', timeline.views.timeline, name ="timeline"),
+    url(r'^join/', joinus.views.joinus, name ="joinus"),
+    url(r'^supporters/', supporters.views.supporters, name ="supporters"),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

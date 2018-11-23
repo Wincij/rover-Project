@@ -1,54 +1,8 @@
 
-<!doctype html>
+{% extends 'base.html' %}
 {% load staticfiles %}
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
-    <title>Album example for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-
-    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'home/css/my.css' %}" rel="stylesheet" />
-  </head>
-
-  <body style="background-color: #BBBBBB;">
-
-    <header class="page-scroll">
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark page fixed-top">
-        <font color="#f1b10e"><b><a class="mylink" href="{% url 'home' %}">UoW ROVER TEAM</a></b></font>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="mylink" href="{% url 'home' %}">About <span class="sr-only">(current)</span></a>
-            <a class="mylink_active" href="{% url 'timeline' %}">Timeline</a>
-            <a class="mylink" href="#">Join us</a>
-            <a class="mylink" href="#">Partners</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main role="main">
-
-      <section class="jumbotron text-center img-fluid img-max-width" style="background-image: url(http://rover.fuw.edu.pl/img/header-bg.jpg);    background-repeat: no-repeat;    background-attachment: scroll;    background-position: center center;    -webkit-background-size: cover;    -moz-background-size: cover; background-size: cover;    -o-background-size: cover;    text-align: center;    color: white;">
-        <div class="container" >
-          <br /><br /><br /><br /><br /><br /><br />
-          <h1 class="jumbotron-heading display-3"><span style="background-color:rgba(241, 177, 14, 0.42); color:#333333; font-weight:bold; padding: 3px 10px 3px 10px; ">UNIVERSITY OF WARSAW <br> ROVER TEAM</span></h1>
-          <p class="lead text"><h2>Marsyatic Start-Up project</h2></p>
-          <br /><br />
-          <br />
-
-        </div>
-      </section>
-
+{% block content %}
 
       <div class="album py-5 bg-gray fluid">
         <div class="container" >
@@ -59,7 +13,7 @@
                         <img class="img-circle img-responsive"src="{{ entry.image.url }}" float="right" height="100%" width="150px" style="border-radius: 50%;margin-right: 50px;float:left;"/>
                       </div>
                       <div class="oneblock">
-                        <p class=date>{{ entry.pub_date }}</p>
+                        <p class=date>{{ entry.prettyDate }}</p>
                         <p class="title">{{ entry.title }}</p>
                         <p>{{ entry.body }}</p>
                       </div>
@@ -74,21 +28,4 @@
       </div>
 
     </main>
-
-    <footer class="text-muted bg-dark page" style="padding-bottom:1px; padding-top:10px;">
-          <p align="center" style="padding-left:50px;">
-            Copyright © University of Warsaw Rover Team 2017.
-            <a href="#" class="btn btn-lg btn-secondary" style="background-color:rgba(241, 177, 14, 0.95) ; ">Back to top</a>
-          </p>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-
-  </body>
-</html>
+{% endblock %}

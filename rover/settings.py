@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'timeline.apps.TimelineConfig',
     'supporters.apps.SupportersConfig',
+    'joinus.apps.JoinusConfig',
     'homepage.apps.HomepageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'rover.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['rover/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

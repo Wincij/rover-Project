@@ -10,5 +10,12 @@ class Entry(models.Model):
     def __str__(self):
         return self.title
 
+
+# Convert 01:00 01.01.2000 to January 2000
+    def prettyDate(self):
+        return self.pub_date.strftime('%B %Y'.upper(), )
+
+
+# Ordered on timeline.html
     class Meta:
         ordering = ['pub_date']

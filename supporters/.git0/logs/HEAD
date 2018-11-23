@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 58a8ddaef2f51fe7deb4c6fdce9fb180fe5bf94b Wincij <m.pajaczkowski95@gmail.com> 1541686826 +0100	commit (initial): New commit - Hello World
+58a8ddaef2f51fe7deb4c6fdce9fb180fe5bf94b ed7a7002620c00fa4adb598f78bcf61938877717 Wincij <m.pajaczkowski95@gmail.com> 1541686975 +0100	commit: Server running
+ed7a7002620c00fa4adb598f78bcf61938877717 fba6115700643eca262aa365206481c1fda9d1c5 Wincij <m.pajaczkowski95@gmail.com> 1541687079 +0100	commit: Created timeline and supported apps
+fba6115700643eca262aa365206481c1fda9d1c5 bcddeaab5013dd44e8c1796f3508b42ed3f1a37c Wincij <m.pajaczkowski95@gmail.com> 1541715994 +0100	commit: Postgresql works
+bcddeaab5013dd44e8c1796f3508b42ed3f1a37c a757b80c83b819836ba05d78536be512a628b9d9 Wincij <m.pajaczkowski95@gmail.com> 1541810299 +0100	commit: Before static files
+a757b80c83b819836ba05d78536be512a628b9d9 8d685e1ce4a357d07c5288dfa40a724e07745790 Wincij <m.pajaczkowski95@gmail.com> 1541810320 +0100	commit: Before static files
+8d685e1ce4a357d07c5288dfa40a724e07745790 f552795d744b4b30713e7e4ba6956cfbd30a18f8 Wincij <m.pajaczkowski95@gmail.com> 1542168456 +0100	commit: Sliding text - done
